@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth; /* enables smooth-scroll navigation for anchor links */
+  }
+
+  body {
+    @apply bg-white text-charcoal font-body antialiased transition-colors duration-300;
+  }
+
+  html.dark body {
+    @apply bg-charcoal text-sand;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading uppercase tracking-wide;
+  }
+
+  /* Visible keyboard focus states for accessibility */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    outline: 2px solid #A9812D;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  /* "Eyebrow" label used above section headings — mission-briefing motif */
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-heading uppercase tracking-[0.25em] text-brass;
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply block h-px w-6 bg-brass;
+  }
+
+  .section-heading {
+    @apply text-3xl sm:text-4xl md:text-5xl font-heading font-semibold leading-[1.05] text-charcoal dark:text-white;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm bg-army px-7 py-3.5 font-heading text-sm uppercase tracking-widest text-white transition-colors duration-200 hover:bg-army-dark disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm border-2 border-charcoal px-7 py-3.5 font-heading text-sm uppercase tracking-widest text-charcoal transition-colors duration-200 hover:bg-charcoal hover:text-white dark:border-sand dark:text-sand dark:hover:bg-sand dark:hover:text-charcoal;
+  }
+
+  .field-input {
+    @apply w-full rounded-sm border border-charcoal/20 bg-white px-4 py-3 font-body text-sm text-charcoal placeholder:text-charcoal/40 focus:border-army focus:outline-none dark:border-sand/20 dark:bg-charcoal-light dark:text-sand dark:placeholder:text-sand/40;
+  }
+
+  .field-error {
+    @apply mt-1 text-xs font-medium text-red-700 dark:text-red-400;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
