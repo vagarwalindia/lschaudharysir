@@ -51,7 +51,7 @@ export default function About() {
                     className="h-full w-full"
                     controls
                     preload="metadata"
-                    poster="/media/images/founder-about.jpeg"
+                    poster="media/images/founder-about.jpeg"
                   >
                     <source src="/media/videos/founder-intro.mp4" type="video/mp4" />
                     Your browser does not support embedded video.
