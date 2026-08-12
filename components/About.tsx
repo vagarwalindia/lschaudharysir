@@ -38,7 +38,7 @@ export default function About() {
                 {/* Founder photo — add the real file at public/media/images/founder-about.jpg */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/media/images/founder-about.jpeg"
+                  src="media/images/insta/founder-about.JPEG"
                   alt="Founder in the field"
                   className="h-full w-full object-cover"
                 />
@@ -51,7 +51,7 @@ export default function About() {
                     className="h-full w-full"
                     controls
                     preload="metadata"
-                    poster="media/images/founder-about.jpeg"
+                    poster="media/images/insta/founder-about.JPEG"
                   >
                     <source src="/media/videos/founder-intro.mp4" type="video/mp4" />
                     Your browser does not support embedded video.

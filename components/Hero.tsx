@@ -97,7 +97,7 @@ export default function Hero() {
           {/* Founder photo — add the real file at public/media/images/founder-hero.jpg */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="media/images/founder-hero.jpeg"
+            src="media/images/insta/founder-about.JPEG"
             alt="VetVentures founder"
             className="h-full w-full rounded-sm object-cover"
           />
