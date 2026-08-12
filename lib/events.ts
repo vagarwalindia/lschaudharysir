@@ -1,7 +1,7 @@
 // Central dummy dataset for the Events calendar.
 // In production, swap this for a CMS/API fetch (e.g. Sanity, Notion, or a database call).
 
-export type EventType = "Corporate" | "Bootcamp" ;
+export type EventType = "Corporate" | "Bootcamp" | "Trek"; // Extendable for future event types
 
 export interface VetEvent {
   id: string;
